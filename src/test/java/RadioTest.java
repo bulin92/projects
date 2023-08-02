@@ -371,6 +371,53 @@ public class RadioTest {
 
     }
 
+    @Test
+    public void negativeQuantityStationTest() {
+        Radio radio = new Radio(35);
+        radio.setCurrentStation(33);
+
+
+        int expected = 33;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void equalQuantityStationTest() {
+        Radio radio = new Radio(35);
+        radio.setCurrentStation(34);
+
+
+        int expected = 34;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void highQuantityStationTest() {
+        Radio radio = new Radio(35);
+        radio.setCurrentStation(35);
+
+
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void oneQuantityStationTest() {
+        Radio radio = new Radio(1);
+        radio.setCurrentStation(0);
+
+
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+
+    }
+
+
+
 
 }
 
